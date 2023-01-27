@@ -1,0 +1,54 @@
+mixin map()
+  section.map.map--faded
+
+    // Метки объявлений
+    .map__pins
+      .map__overlay
+        h2.map__title И снова Токио!
+      button(class="map__pin map__pin--main" style="left: 570px; top: 375px;")
+        img(src="img/svg/muffin-red.svg" width="40" height="44" draggable="false" alt="Метка объявления")
+        svg(viewBox='0 0 70 70' width='156' height='156' aria-label='Метка для поиска жилья')
+          defs
+            path#tophalf(d='M35,35m-23,0a23,23 0 1,1 46,0a23,23 0 1,1 -46,0')
+          ellipse(cx='35' cy='35' rx='35' ry='35' fill='rgba(255, 86, 53, 0.7)')
+          text
+            textpath(xlink:href='#tophalf' startOffset='0') Поставь меня куда-нибудь
+
+
+    // Фильтрация объявлений
+    .map__filters-container
+      form.map__filters(action='#' autocomplete='off')
+        select#housing-type.map__filter(name='housing-type')
+          option(value='any' selected='') Любой тип жилья
+          option(value='palace') Дворец
+          option(value='flat') Квартира
+          option(value='house') Дом
+          option(value='bungalow') Бунгало
+        select#housing-price.map__filter(name='housing-price')
+          option(value='any' selected='') Любая
+          option(value='middle') 10000 - 50000₽
+          option(value='low') до 10000₽
+          option(value='high') от 50000₽
+        select#housing-rooms.map__filter(name='housing-rooms')
+          option(value='any' selected='') Любое число комнат
+          option(value='1') Одна комната
+          option(value='2') Две комнаты
+          option(value='3') Три комнаты
+        select#housing-guests.map__filter(name='housing-guests')
+          option(value='any' selected='') Любое число гостей
+          option(value='2') Два гостя
+          option(value='1') Один гость
+          option(value='0') Не для гостей
+        fieldset#housing-features.map__features
+          input#filter-wifi.map__checkbox.visually-hidden(type='checkbox' name='features' value='wifi')
+          label.map__feature.map__feature--wifi(for='filter-wifi') Wi-Fi
+          input#filter-dishwasher.map__checkbox.visually-hidden(type='checkbox' name='features' value='dishwasher')
+          label.map__feature.map__feature--dishwasher(for='filter-dishwasher') Посудомоечная машина
+          input#filter-parking.map__checkbox.visually-hidden(type='checkbox' name='features' value='parking')
+          label.map__feature.map__feature--parking(for='filter-parking') Парковка
+          input#filter-washer.map__checkbox.visually-hidden(type='checkbox' name='features' value='washer')
+          label.map__feature.map__feature--washer(for='filter-washer') Стиральная машина
+          input#filter-elevator.map__checkbox.visually-hidden(type='checkbox' name='features' value='elevator')
+          label.map__feature.map__feature--elevator(for='filter-elevator') Лифт
+          input#filter-conditioner.map__checkbox.visually-hidden(type='checkbox' name='features' value='conditioner')
+          label.map__feature.map__feature--conditioner(for='filter-conditioner') Кондиционер

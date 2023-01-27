@@ -1,0 +1,22 @@
+.copyright {
+  font-size: 12px;
+
+  &__link {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 2px #ff6547;
+    }
+  }
+
+  &__link--image {
+    display: block;
+  }
+
+  &__link--text {
+    color: #353535;
+  }
+}

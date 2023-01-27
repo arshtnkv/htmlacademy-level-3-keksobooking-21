@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: solid 1px #cccccc;
+
+  &__contacts {
+    background-color: inherit;
+  }
+}

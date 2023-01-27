@@ -1,0 +1,11 @@
+.promo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  z-index: 1;
+
+  width: 211px;
+  height: 45px;
+
+  transform: translateX(-50%);
+}

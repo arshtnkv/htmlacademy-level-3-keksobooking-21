@@ -1,0 +1,134 @@
+.popup {
+  &__avatar {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    margin-bottom: 10px;
+  }
+
+  &__close {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+
+    padding: 0;
+
+    font-size: 0;
+
+    border: 0;
+    background: none;
+
+    &:active {
+      transform: translate(1px, 1px);
+    }
+
+    &:focus {
+      box-shadow: 0 0 10px 3px #ff6547;
+    }
+
+    &::after {
+      font-size: 50px;
+      line-height: 40px;
+
+      display: block;
+      content: "×";
+
+      color: #000000;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__text--price {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  &__text--capacity {
+    margin-bottom: 0;
+  }
+
+  &__price {
+    span {
+      font-size: 16px;
+    }
+  }
+
+  &__type {
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  &__features {
+    margin: 0 0 10px;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__feature {
+    display: inline-block;
+    overflow: hidden;
+
+    width: 30px;
+    height: 28px;
+
+    font-size: 0;
+
+    background-image: url("../img/svg/sprite-feature.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px 345px;
+  }
+
+  &__feature--wifi {
+    background-position: 2px 5px;
+  }
+
+  &__feature--dishwasher {
+    background-position: 2px -25px;
+  }
+
+  &__feature--parking {
+    background-position: 3px -55px;
+  }
+
+  &__feature--washer {
+    background-position: 2px -85px;
+  }
+
+  &__feature--elevator {
+    background-position: 2px -143px;
+  }
+
+  &__feature--conditioner {
+    background-position: 3px -114px;
+  }
+
+  &__photos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__photo {
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+    &:hover {
+      border: 2px solid #ff5635;
+    }
+  }
+}

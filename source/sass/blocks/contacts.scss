@@ -1,0 +1,64 @@
+.contacts {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__link {
+    display: block;
+
+    width: 29px;
+    height: 29px;
+    margin-left: 10px;
+
+    font-size: 0;
+
+    background-image: url("../img/svg/sprite-social.svg");
+    background-repeat: no-repeat;
+    background-size: 29px 274px;
+
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 2px 2px #ff6547;
+    }
+  }
+
+  &__link--twitter {
+    background-position: 0 0;
+
+    &:hover,
+    &:focus {
+      background-position: 0 -140px;
+    }
+  }
+
+  &__link--instagram {
+    background-position: 0 -35px;
+
+    &:hover,
+    &:focus {
+      background-position: 0 -175px;
+    }
+  }
+
+  &__link--facebook {
+    background-position: 0 -70px;
+
+    &:hover,
+    &:focus {
+      background-position: 0 -210px;
+    }
+  }
+
+  &__link--vk {
+    background-position: 0 -105px;
+
+    &:hover,
+    &:focus {
+      background-position: 0 -245px;
+    }
+  }
+}
